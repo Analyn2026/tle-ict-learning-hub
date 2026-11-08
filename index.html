@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLE-ICT Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#176B45">
+<meta name="description" content="Offline-ready TLE-ICT learning resources for Burauen Comprehensive National High School">
+</head>
+<body>
+<header class="app-header">
+    <div class="header-logos">
+        <img src="deped-logo.png" alt="DepEd Logo" class="partner-logo">
+        <img src="school-logo.png" alt="Burauen Comprehensive National High School" class="main-logo">
+        <img src="division-leyte-logo.png" alt="Schools Division of Leyte" class="partner-logo">
+    </div>
+    <h1>TLE-ICT LEARNING HUB</h1>
+    <p>Burauen Comprehensive National High School</p>
+    <p class="division-name">Schools Division of Leyte</p>
+    <span>LEARN • EXPLORE • PRACTICE</span>
+</header>
+
+<main class="container">
+    <section class="welcome-section" id="welcome-section">
+        <h2>Welcome, Learner!</h2>
+        <p>Your learning companion for TLE-ICT.</p>
+    </section>
+
+    <section class="student-form" id="student-form">
+        <h3>Student Information</h3>
+        <label for="grade">Grade Level</label>
+        <select id="grade">
+            <option value="">Select Grade Level</option>
+            <option value="Grade 9">Grade 9</option>
+            <option value="Grade 10">Grade 10</option>
+        </select>
+
+        <label for="section">Section</label>
+        <input type="text" id="section" placeholder="Enter your section">
+
+        <label for="term">Select Learning Term</label>
+        <select id="term">
+            <option value="">Choose your learning term</option>
+            <option value="Term 1">Term 1</option>
+            <option value="Term 2">Term 2</option>
+            <option value="Term 3">Term 3</option>
+        </select>
+
+        <label for="sector">Select TLE-ICT Sector</label>
+        <select id="sector">
+            <option value="">Choose your sector</option>
+            <option value="Computer Programming">Computer Programming</option>
+            <option value="Computer Systems Servicing">Computer Systems Servicing (CSS)</option>
+            <option value="Visual Arts">Visual Arts</option>
+            <option value="Telecommunications">Telecommunications</option>
+        </select>
+        <button type="button" onclick="startLearning()">START LEARNING</button>
+    </section>
+
+    <section id="learner-materials" class="materials-section" hidden>
+        <div class="materials-heading">
+            <div>
+                <h2>Learning Materials</h2>
+                <p id="learner-summary"></p>
+            </div>
+            <button type="button" class="secondary-button" onclick="backToStudentForm()">CHANGE DETAILS</button>
+        </div>
+        <section id="topic-search" class="topic-search day-card">
+            <h3>Enter Topic Code</h3>
+            <p>Enter the topic code provided by your teacher to open its learning materials.</p>
+            <label for="topic-name">Topic Code</label>
+            <input type="text" id="topic-name" placeholder="Example: W1_01" autocomplete="off">
+            <button type="button" onclick="unlockTopic()">OPEN TOPIC</button>
+            <p id="topic-search-message" class="small-note" role="status" aria-live="polite"></p>
+        </section>
+        <div id="materials-content" hidden></div>
+        <section id="resource-viewer" class="resource-viewer" hidden>
+            <button type="button" class="secondary-button back-button" onclick="backToMaterials()">← BACK TO LEARNING MATERIALS</button>
+            <h2 id="resource-title"></h2>
+            <p id="resource-subtitle" class="resource-subtitle"></p>
+            <div id="resource-body" class="resource-body"></div>
+            <button type="button" class="secondary-button back-button" onclick="backToMaterials()">← BACK TO LEARNING MATERIALS</button>
+        </section>
+        <button type="button" class="secondary-button home-button" onclick="backToHome()">⌂ BACK TO HOME</button>
+    </section>
+
+    <footer>
+        <p>© TLE-ICT Learning Hub</p>
+        <p>Burauen Comprehensive National High School</p>
+    </footer>
+</main>
+<script src="week1-content.js"></script>
+<script src="week2-10-content.js"></script>
+<script src="daily-materials.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

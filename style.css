@@ -1,0 +1,144 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F5F8F5;
+    color: #26352C;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.app-header {
+    background: linear-gradient(135deg, #145A38, #2E8B57);
+    color: white;
+    text-align: center;
+    padding: 25px 15px 30px;
+    border-bottom: 5px solid #F5D547;
+}
+.header-logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto 18px;
+}
+.header-logos img { display: block; object-fit: contain; }
+.partner-logo { width: 60px; height: 60px; flex: 0 0 60px; }
+.main-logo { width: 90px; height: 90px; flex: 0 0 90px; }
+.app-header h1 { font-size: 25px; margin-bottom: 8px; }
+.app-header p { font-size: 14px; margin-bottom: 8px; }
+.division-name { color: #F5D547; font-weight: bold; }
+.app-header span { font-size: 12px; letter-spacing: 2px; color: #F5D547; font-weight: bold; }
+
+.container { width: 90%; max-width: 650px; margin: 25px auto; }
+.welcome-section { text-align: center; margin-bottom: 25px; }
+.welcome-section h2, .materials-section h2 { color: #176B45; margin-bottom: 8px; }
+.welcome-section p { color: #68776D; font-size: 14px; }
+
+.student-form, .materials-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+.student-form h3 { color: #176B45; margin: 18px 0 12px; text-align: center; }
+.student-form label { display: block; font-size: 14px; font-weight: bold; margin: 15px 0 7px; }
+.student-form input, .student-form select, .student-form textarea {
+    width: 100%; padding: 13px; border: 1px solid #D5E2D8;
+    border-radius: 8px; font-size: 14px; background: #FAFCFA;
+}
+.student-form input:focus, .student-form select:focus, .student-form textarea:focus {
+    outline: 2px solid #2E8B57; border-color: #2E8B57;
+}
+button {
+    padding: 13px 16px; margin-top: 18px; border: 0; border-radius: 8px;
+    background: #176B45; color: white; font-size: 14px; font-weight: bold; cursor: pointer;
+}
+button:hover { background: #2E8B57; }
+.student-form > button { width: 100%; }
+.secondary-button { background: #EEF4EF; color: #176B45; border: 1px solid #B9D1C0; }
+.secondary-button:hover { background: #DDEBE0; color: #145A38; }
+
+.admin-access { text-align: center; margin: 25px auto; }
+.admin-access p { color: #176B45; font-weight: bold; margin-bottom: 2px; }
+.admin-access button { background: white; color: #176B45; border: 2px solid #176B45; padding: 12px 25px; }
+.admin-access button:hover { background: #176B45; color: white; }
+
+.materials-section { margin-top: 20px; }
+.materials-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.materials-heading p { color: #68776D; font-size: 13px; }
+.topic-search { margin-top: 12px; }
+.topic-search label { display:block; margin:10px 0 5px; font-size:13px; font-weight:bold; color:#405348; }
+.topic-search input { width:100%; box-sizing:border-box; padding:12px; border:1px solid #C9D8CD; border-radius:8px; font:inherit; margin-bottom:10px; }
+.topic-search button:not(.secondary-button) { width:100%; }
+.day-card { border: 1px solid #DCE8DF; border-radius: 10px; padding: 16px; margin: 14px 0; }
+.day-card h3 { color: #176B45; margin-bottom: 5px; }
+.day-card p { color: #68776D; font-size: 13px; margin-bottom: 12px; }
+.material-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.material-link {
+    display: block; text-decoration: none; text-align: center; padding: 11px 8px;
+    background: #EEF6F0; color: #176B45; border: 1px solid #CFE0D3;
+    border-radius: 8px; font-size: 13px; font-weight: bold;
+}
+.material-link:hover { background: #DDEBE0; }
+.small-note { font-size: 12px; color: #68776D; margin-top: 8px; }
+.saved-lessons { margin-top: 20px; }
+.saved-item { background: #F5F8F5; border-radius: 8px; padding: 10px; margin-top: 8px; font-size: 13px; }
+footer { text-align: center; color: #829087; font-size: 11px; margin: 25px 0; line-height: 1.7; }
+[hidden] { display: none !important; }
+
+@media (max-width: 420px) {
+    .header-logos { gap: 8px; }
+    .partner-logo { width: 50px; height: 50px; flex-basis: 50px; }
+    .main-logo { width: 72px; height: 72px; flex-basis: 72px; }
+    .app-header h1 { font-size: 21px; }
+    .container { width: 94%; }
+    .student-form, .materials-section { padding: 18px; }
+    .material-links { grid-template-columns: 1fr 1fr; }
+}
+
+/* In-app reader for phones and tablets */
+.material-link { width:100%; border:1px solid #CFE0D3; cursor:pointer; font-family:inherit; margin:0; }
+.resource-viewer { background:#fff; border:1px solid #DCE8DF; border-radius:12px; padding:18px; margin-top:12px; }
+.resource-viewer h2 { color:#176B45; line-height:1.3; margin:16px 0 8px; }
+.resource-subtitle { color:#68776D; font-size:14px; margin-bottom:18px; }
+.resource-body { color:#26352C; font-size:15px; line-height:1.75; overflow-wrap:anywhere; }
+.resource-body p { margin:10px 0; white-space:pre-wrap; }
+.resource-body h2 { font-size:20px; margin-top:22px; }
+.resource-body h3 { font-size:17px; color:#176B45; margin:18px 0 7px; }
+.resource-document-title { border-bottom:2px solid #E5EEE7; padding-bottom:10px; }
+.content-table-wrap { width:100%; overflow-x:auto; margin:14px 0; }
+.content-table { width:100%; border-collapse:collapse; font-size:13px; }
+.content-table th,.content-table td { border:1px solid #D5E2D8; padding:9px; text-align:left; vertical-align:top; }
+.content-table th { background:#EEF6F0; color:#145A38; }
+.back-button { width:100%; margin:8px 0 14px; }
+@media(max-width:420px){.resource-viewer{padding:14px}.resource-body{font-size:14px}.material-links{grid-template-columns:1fr 1fr}.material-link{min-height:48px;padding:10px 6px;font-size:12px}}
+
+/* Teacher topic-code controls */
+.inline-check { display:flex; align-items:center; gap:9px; margin:12px 0; font-size:14px; }
+.inline-check input { width:auto; min-height:auto; }
+#topic-code-list .saved-item button { margin-top:8px; width:auto; padding:7px 12px; }
+#topic-code-list h4 { color:#176B45; margin:18px 0 8px; }
+
+
+/* Learner navigation: return to the main home screen */
+.home-button { width: 100%; margin-top: 18px; min-height: 48px; font-weight: 700; }
+
+/* Hybrid/offline update */
+.file-link { display: block; text-decoration: none; text-align: center; }
+.notice-box { margin: 16px 0; padding: 14px; border-left: 4px solid #c58a19; background: #fff8e8; border-radius: 8px; line-height: 1.5; }
+.saved-item { overflow-wrap: anywhere; }
+
+/* Embedded daily lessons for Weeks 2–10 */
+.daily-lesson section{margin:14px 0;padding:12px;background:#f7faf8;border-left:4px solid #176B45;border-radius:6px}
+.daily-lesson h4,.week-overview h4,.performance-task h4{color:#176B45;margin:0 0 6px;font-size:15px}
+.daily-lesson section p{white-space:pre-wrap;line-height:1.65;color:#26352c}
+.performance-task{background:#fff8e7!important;border-left-color:#d6a500!important}
+.daily-lesson .material-links{margin-top:12px}
+.daily-lesson .material-link{cursor:pointer}
+@media(max-width:600px){.daily-lesson .material-links{grid-template-columns:1fr}}
+
+.lesson-code{white-space:pre-wrap;overflow-x:auto;background:#f3f6f4;border:1px solid #d7e4dc;border-radius:8px;padding:14px;font-family:Consolas,monospace;font-size:.92rem;line-height:1.5;color:#173b2b;margin:12px 0 18px;}
